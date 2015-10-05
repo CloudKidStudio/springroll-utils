@@ -28,6 +28,12 @@
 				"src/pixi/Slice9Sprite.js"
 			]
 		},
+		"pixipercenttexture": {
+			"output": "pixi-percent-texture",
+			"main": [
+				"src/pixi/PercentTexture.js"
+			]
+		},
 		"pixiui": {
 			"output": "pixi-ui",
 			"main": [
