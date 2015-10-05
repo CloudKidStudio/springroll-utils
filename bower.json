@@ -1,0 +1,30 @@
+{
+	"name": "springroll-utils",
+	"version": "0.0.1",
+	"main": "",
+	"dependencies": {
+		"springroll": "*"
+	},
+	"devDependencies": {
+		"pixi.js": "https://github.com/SpringRoll/pixi.js.git",
+		"easeljs": "https://github.com/SpringRoll/EaselJS.git",
+		"tweenjs": "https://github.com/SpringRoll/TweenJS.git",
+		"soundjs": "https://github.com/SpringRoll/SoundJS.git"
+	},
+	"ignore": [
+		"Gruntfile.js",
+		"tasks",
+		"examples",
+		"docs",
+		"src",
+		"test",
+		"tools",
+		".bowerrc",
+		".editorconfig",
+		".travis.yml",
+		".gitattributes",
+		"library.json",
+		"package.json",
+		".gitignore"
+	]
+}

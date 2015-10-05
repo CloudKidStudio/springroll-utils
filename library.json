@@ -1,0 +1,51 @@
+{
+	"name": "springroll-utils",
+	"version": "0.0.1",
+	"description": "An application framework for building HTML5 Canvas games and applications",
+	"url": "https://github.com/CloudKidStudio/springroll-utils",
+	"output": "empty",
+	"main": [
+	],
+	"modules": {
+		"collision": {
+			"output": "collision",
+			"main": [
+				"src/collision/Polygon.js",
+				"src/collision/CollisionUtils.js"
+			]
+		},
+		"pixislice3": {
+			"output": "pixi-slice3",
+			"main": [
+				"src/pixi/Slice3Textures.js",
+				"src/pixi/Slice3Sprite.js"
+			]
+		},
+		"pixislice9": {
+			"output": "pixi-slice9",
+			"main": [
+				"src/pixi/Slice9Textures.js",
+				"src/pixi/Slice9Sprite.js"
+			]
+		},
+		"pixiui": {
+			"output": "pixi-ui",
+			"main": [
+				"src/pixi/IconButton.js",
+				"src/pixi/List.js"
+			]
+		},
+		"tween": {
+			"output": "tween",
+			"main": [
+				"src/tween/TweenHelper.js"
+			]
+		},
+		"ui": {
+			"output": "ui",
+			"main": [
+				"src/ui/ButtonSounds.js"
+			]
+		}
+	}
+}
