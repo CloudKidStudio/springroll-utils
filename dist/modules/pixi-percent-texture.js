@@ -5,16 +5,15 @@
 	
 	var PercentTexture = function(base, useHeight, min, max, invertScaling)
 	{
-		Texture.call(this, base.baseTexture, base.frame.clone());
-
-		this.crop = base.crop.clone();
+		var trim;
 		if(base.trim)
-			this.trim = base.trim.clone();
+			trim = base.trim.clone();
 		else
 		{
-			this.trim = base.crop.clone();
-			this.trim.x = this.trim.y = 0;
+			trim = base.crop.clone();
+			trim.x = trim.y = 0;
 		}
+		Texture.call(this, base.baseTexture, base.frame.clone(), base.crop.clone(), trim);
 		
 		this.useHeight = !!useHeight;
 		this.invertScaling = !!invertScaling;
