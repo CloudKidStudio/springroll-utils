@@ -279,13 +279,21 @@
 	 * Checks if the x, and y coords passed to this function are contained within this polygon
 	 *
 	 * @method contains
-	 * @param x {Number} The X coord of the point to test
-	 * @param y {Number} The Y coord of the point to test
+	 * @param {Number} x The X coord of the point to test
+	 * @param {Number} y The Y coord of the point to test
+	 * @param {Boolean} [isLocal=false] If the position we are testing is local to the polygon
+	 *                                  instead of a world position.
 	 * @return {Boolean} if the x/y coords are within this polygon
 	 */
-	p.contains = function(x, y)
+	p.contains = function(x, y, isLocal)
 	{
 		var inside = false;
+		
+		if(!isLocal)
+		{
+			x -= this.origin.x;
+			y -= this.origin.y;
+		}
 
 		// use some raycasting to test hits
 		// https://github.com/substack/point-in-polygon/blob/master/index.js
