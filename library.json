@@ -52,6 +52,12 @@
 			"main": [
 				"src/ui/ButtonSounds.js"
 			]
+		},
+		"math": {
+			"output": "math",
+			"main": [
+				"src/math/RandomList.js"
+			]
 		}
 	}
 }
