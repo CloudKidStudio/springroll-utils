@@ -38,7 +38,8 @@
 			"output": "pixi-ui",
 			"main": [
 				"src/pixi/IconButton.js",
-				"src/pixi/List.js"
+				"src/pixi/List.js",
+				"src/pixi/Scroller.js"
 			]
 		},
 		"tween": {

@@ -168,6 +168,8 @@
 			this.maxScroll = this.listWidth - this.listViewArea;
 		else
 			this.maxScroll = this.listHeight - this.listViewArea;
+		//update scrolling if needed
+		this.scroll = this.scroll;
 		
 		this.emit("resize", this.listWidth, this.listHeight);
 	};
@@ -195,6 +197,7 @@
 			this.removeItem(this.items[i], true);
 		
 		this.listWidth = this.listHeight = 0;
+		this.scroll = 0;
 		
 		this.emit("resize", this.listWidth, this.listHeight);
 	};
