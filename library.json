@@ -39,7 +39,8 @@
 			"main": [
 				"src/pixi/IconButton.js",
 				"src/pixi/List.js",
-				"src/pixi/Scroller.js"
+				"src/pixi/Scroller.js",
+				"src/pixi/VisualHitArea.js"
 			]
 		},
 		"tween": {
@@ -57,7 +58,8 @@
 		"math": {
 			"output": "math",
 			"main": [
-				"src/math/RandomList.js"
+				"src/math/RandomList.js",
+				"src/math/HoledShape.js"
 			]
 		}
 	}
