@@ -718,7 +718,7 @@
 			target.__visHitArea = hit;
 		}
 		hitArea.drawOnGraphics(hit, color);
-		target.addChild(hitArea);
+		target.addChild(hit);
 	};
 	
 	//set up drawing functions for our default shapes
