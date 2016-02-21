@@ -3,7 +3,7 @@
 	
 	var Texture = include("PIXI.Texture");
 	
-	var PercentTexture = function(base, useHeight, min, max, invertScaling)
+	var PercentTexture = function(base, useHeight, min, max, invertScaling, roundToInts)
 	{
 		var trim;
 		if(base.trim)
@@ -25,6 +25,8 @@
 
 		this.min = min || 0;
 		this.max = max === undefined ? (this.useHeight ? this.crop.height : this.crop.width) : max;
+		
+		this.useRounding = !!roundToInts;
 
 		this.setPercent(1);
 	};
@@ -63,6 +65,15 @@
 				this.crop.height = val;
 			else
 				this.crop.width = val;
+		}
+		//if the texture is on the edge of the texture, or if we are doing tinting in a canvas
+		//fallback, and the width/height ends up being outside of the texture, then some browsers
+		//don't handle that well
+		if(this.useRounding)
+		{
+			//do a quick floor
+			this.crop.width |= 0;
+			this.crop.height |= 0;
 		}
 		
 		this._updateUvs();
